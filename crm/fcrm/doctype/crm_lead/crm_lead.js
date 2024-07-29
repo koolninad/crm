@@ -14,15 +14,7 @@ frappe.ui.form.on("CRM Lead", {
                         const result = response.message;
                         if (result.message) {
                             frappe.msgprint({
-                                title: __('Error'),
                                 message: result.message,
-                                indicator: 'red'
-                            });
-                        } else {
-                            frappe.msgprint({
-                                title: __('Success'),
-                                message: __('Call initiated successfully: ') + JSON.stringify(result),
-                                indicator: 'green'
                             });
                         }
                     }
